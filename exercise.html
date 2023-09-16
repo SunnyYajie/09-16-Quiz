@@ -28,7 +28,12 @@
         <ol>
             <li>Delivery date filter for an application, that cannot select previous date past today's date.</li>
             <!--ANWER HERE-->
-
+            <form action="submit.php" method="post">
+                <strong><label for="date">Delivery Date</label>
+                <input type="date" name="date" id="date" min="2023-09-16"></strong>
+                <strong><input type="submit" value="submit"></strong>
+            </form>
+            <hr>
             <!--END ANWER HERE-->
 
             <li>An input field used to select ONE item from the Southeast Asian nations, with Philippines as initially selected record: (follow the order of nations below)</li>
@@ -46,7 +51,25 @@
                         <li>Vietname</li>
                     </ul>
             <!--ANWER HERE--> 
-            
+            <form action="submit.php" method="post">
+                <h3>Country</h3>
+                <ul>
+                    <strong><li><input type="radio" id="Burma" name="Country" value="Burma"><label for="Burma">Burma</label></li>
+                    <li><input type="radio" id="Brunei" name="Country" value="Brunei"><label for="Brunei">Brunei</label></li>
+                    <li><input type="radio" id="Cambodia" name="Country" value="Cambodia"><label for="Cambodia">Cambodia</label></li>
+                    <li><input type="radio" id="Indonesia" name="Country" value="Indonesia"><label for="Indonesia">Indonesia</label></li>
+                    <li><input type="radio" id="Laos" name="Country" value="Laos"><label for="Laos">Laos</label></li>
+                    <li><input type="radio" id="Malaysia" name="Country" value="Malaysia"><label for="Malaysia">Malaysia</label></li>
+                    <li><input type="radio" id="Philippines" name="Country" value="Philippines" checked><label for="Philippines">Philippines</label></li>
+                    <li><input type="radio" id="Singapore" name="Country" value="Singapore"><label for="Singapore">Singapore</label></li>
+                    <li><input type="radio" id="Thailand" name="Country" value="Thailand"><label for="Thailand">Thailand</label></li>
+                    <li><input type="radio" id="Timor-Leste" name="Country" value="Timor-Leste"><label for="Timor-Leste">Timor-Leste</label></li>
+                    <li><input type="radio" id="Vietname" name="Country" value="Vietname"><label for="Vietname">Vietname</label></li>
+                </strong>
+                </ul>
+                <strong><input type="submit" value="submit"></strong>
+            </form>
+            <hr>
             <!--END ANWER HERE-->
 
             <li>An input field for ingredients that can select one or more from the list:</li>
@@ -58,18 +81,42 @@
                     <li>Carrots</li>
                     <li>Onion</li>
                 </ul>
-            <!--ANWER HERE--> 
-            
+            <!--ANWER HERE-->
+            <form action="submit.php" method="post">
+            <h3>Ingredients</h3>
+            <ul> 
+                <strong><li><input type="checkbox" id="Fresh Celery" name="Fresh Celery"><label for="Fresh Celery">Fresh Celery</label></li>
+                <li><input type="checkbox" id="Skim Milk" name="Skim Milk"><label for="Skim Milk">Skim Milk</label></li>
+                <li><input type="checkbox" id="Butter" name="Butter"><label for="Butter">Butter</label></li>
+                <li><input type="checkbox" id="Carrots" name="Carrots"><label for="Carrots">Carrots</label></li>
+                <li><input type="checkbox" id="Onion" name="Onion"><label for="Onion">Onion</label></li></strong>
+                <strong><input type="submit" value="submit"></strong>
+            </ul>
+            </form>
+        
+        <hr>
             <!--END ANWER HERE--> 
 
             <li>An input field to select whether a user is an administrator or not? (Boolean)</li>    
             <!--ANWER HERE--> 
-            
+            <form action="submit.php" method="post">
+                <strong><label for="admin">Are you an administrator?</label>
+                <select id="admin" name="admin">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                </select></strong>
+                <strong><input type="submit" value="submit"></strong>
+            </form>
+            <hr>
             <!--END ANWER HERE-->  
 
             <li>An input field to upload one or more audio related files(like mp3, wav, ogg, m4a)</li>
-            <!--ANWER HERE--> 
-            
+            <!--ANWER HERE-->
+            <form action="submit.php" method="post">
+                <strong><label for="audioFiles">Upload Audio Files:</label>
+                <input type="file" id="audioFiles" name="audioFiles[]" accept=".mp3, .wav, .ogg, .m4a" multiple></strong>
+                <strong><input type="submit" value="submit"></strong>
+            </form>
             <!--END ANWER HERE-->    
                 
 
@@ -92,13 +139,227 @@
         <img src="./excel.png" alt="table-of-schedules" width="300" >
         
         <p>Use the base code below for basic styling. You may use css if you know it</p>
-        <table style="border-collapse: collapse;">
+        <!-- <table style="border-collapse: collapse;">
             <tr style="border: 1px solid black;">
                 <td style="border: 1px solid black;">data</td>
                 <td style="border: 1px solid black;">data</td>
             </tr>
-        </table>
+        </table> -->
         <!--ANWER HERE--> 
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr bgcolor="grey">
+                    <th bgcolor="grey" rowspan = 2 width = "100" style="border: 1px solid black;">Time</th>
+                    <th style="border: 1px solid black;" colspan = 6 width = "100">Day of The Week</th>
+                </tr>
+                <tr bgcolor="grey" >
+                    <th style="border: 1px solid black;" width = "100">Monday</th>
+                    <th style="border: 1px solid black;" width = "100">Tuesday</th>
+                    <th style="border: 1px solid black;" width = "100">Wednesday</th>
+                    <th style="border: 1px solid black;" width = "100">Thursday</th>
+                    <th style="border: 1px solid black;" width = "100">Friday</th>
+                    <th style="border: 1px solid black;" width = "100">Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">7:00-7:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td bgcolor="#77DD77" align="center" rowspan="10" style="border: 1px solid black;">Project MGMT</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td bgcolor="lightgreen" align="center" rowspan="6" style="border: 1px solid black;">RDBMS</td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">7:30-8:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">8:00-8:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">8:30-9:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">9:00-9:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td bgcolor="lightblue" align="center" rowspan="6" style="border: 1px solid black;">NETWORK MGMT</td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">9:30-10:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">10:00-10:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td bgcolor="lightblue" align="center" rowspan="4" style="border: 1px solid black;">NETWORK MGMT</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td bgcolor="#FFD580" align="center" rowspan="6" style="border: 1px solid black;">EVENT DRIVEN</td>
+                    
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">10:30-11:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">11:00-11:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">11:30-12:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">12:00-12:30</td>
+                    <td bgcolor="lightgreen" align="center" rowspan="4" style="border: 1px solid black;">RDBMS</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">12:30-13:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">13:00-13:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td bgcolor="lightgrey" align="center" rowspan="5" style="border: 1px solid black;">WEBDEV</td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">13:30-14:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">14:00-14:30</td>
+                    <td bgcolor="#FFD580" align="center" rowspan="4" style="border: 1px solid black;">EVENT DRIVEN</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">14:30-15:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">15:00-15:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">15:30-16:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">16:00-16:30</td>
+                    <td bgcolor="lightgrey" align="center" rowspan="4" style="border: 1px solid black;">WEBDEV</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">16:30-17:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">17:00-17:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">17:30-18:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">18:00-18:30</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;" align="right">18:30-19:00</td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                    <td style="border: 1px solid black;"></td>
+                </tr>
+        </tbody>
+        </table>
                 
         <!--END ANWER HERE-->
     </section>
